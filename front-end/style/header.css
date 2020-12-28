@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:400,200,700);
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+} */
+.header{
+    height: 80px; 
+}
+.row{
+    margin: 0; padding: 0;
+}
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 80px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    background-color: #f8f9fa;
+    filter: blur(5%)
+}
+header.sticky{
+    background-color: #fff;
+    padding: 5px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+header .logo{
+    color: #000;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: rgb(8, 10, 34);
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    padding-top: 10px;
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 0 15px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+header .menu .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #030816;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+header .menu .nav-link:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+header .menu .nav-link:not(.is-active):hover {
+    color: #333;
+}
+
+.navbar-brand img{
+    width: 120px;
+    height: 70px;
+}
+
+/* HEADER */
+
+/* Responsive */
+@media (max-width:991px){
+    header,
+    header.sticky{
+        padding: 20px 20px;
+        z-index: 1000;
+        padding-left: 20px;
+    }
+    .menu{
+        position: fixed;
+        top: 120px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 3, 0.925);
+        transition: 0.5s;
+        color: #fff;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .menu.active{
+        left: 0;
+    }
+    header ul li a{
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        margin: 10px;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+        background: url(images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 15px;
+    }
+    header.sticky.toggle{
+        filter: invert(1);
+    }
+    header.sticky ul li a {
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+    }
+    .carousel-caption{
+        padding-bottom: 60px;
+        font-family: poppins;
+    }
+}

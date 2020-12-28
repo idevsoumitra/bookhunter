@@ -1,0 +1,101 @@
+h1
+{
+	color:#fff;
+	margin:40px 0 60px 0;
+	font-weight:300;
+}
+
+.our-team-main
+{
+	width:100%;
+	height:auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-bottom:5px #323233 solid;
+	background:#fff;
+	text-align:center;
+	border-radius:2px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+}
+
+
+.our-team-main img
+{
+	border-radius: 3px;
+	margin-bottom:10px;
+    width: 90px;
+    height: 60px;
+}
+
+.our-team-main h3
+{
+    padding: 0;
+    margin: 0;
+	font-size:15px;
+	font-weight:600;
+}
+.our-team-main h6
+{
+    padding: 0;
+    margin: 5px;
+	font-size:12px;
+	font-weight:600;
+}
+
+.our-team-main p
+{
+    margin-bottom:0;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.team-back
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:left;
+    opacity: 1;
+    background: transparent;
+	
+}
+.team-back span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+}
+    
+.team-front
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:rgb(233, 238, 255);
+	padding:5px;
+	bottom:0px;
+    transition: all 0.5s ease;
+    font-size: 15px;
+}
+
+.our-team-main:hover .team-front
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover
+{
+	border-color:#777;
+	transition:0.5s;
+}
+
+/*our-team-main*/
